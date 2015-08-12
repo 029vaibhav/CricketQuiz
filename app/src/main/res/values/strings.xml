@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">GoT Quiz</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_about_us">About Us</string>
+    <string name="facebook_app_id">493481567493903</string>
+    <string name="ok">OK</string>
+    <string name="error">Error</string>
+    <string name="cancelled">Cancelled</string>
+    <string name="permission_not_granted">Permission not granted</string>
+    <string name="success">Success</string>
+    <string name="successfully_posted_post">Successfully posted post</string>
+    <string name="enter_by_double_tap">Enter by double tap</string>
+    <string name="no_image">No Image</string>
+    <string name="title_activity_ads">AdsActivity</string>
+    <string name="title_activity_last_screen">LastScreen</string>
+
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="clickSlider">#8000CCFF</color>
+    <color name="Purple">#6837C7</color>
+    <color name="Narangi">#EA5600</color>
+    <color name="Mosambi">#FF8B1E</color>
+    <color name="Aamli">#C5781E</color>
+    <color name="Banana">#F7D617</color>
+    <color name="Popati">#658F07</color>
+    <color name="Paani">#39A7F2</color>
+    <color name="DarkCherry">#910707</color>
+    <color name="DarkGreen">#004c00</color>
+    <color name="Cyan">#369D99</color>
+    <color name="Cyan1">#277B83</color>
+    <color name="Cyan2">#1D6375</color>
+    <color name="dark_blue">#1A64A6</color>
+    <color name="LtdRed">#dc322f</color>
+    <color name="LtdCyan">#2aa198</color>
+    <color name="LtdGreen">#2aa15d</color>
+    <color name="LtdBlue">#2867f3</color>
+<color name="white_trans">#80FFFFFF</color>
+</resources>
