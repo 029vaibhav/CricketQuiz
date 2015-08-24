@@ -323,6 +323,7 @@ public class MainActivity extends Activity implements OnClickListener {
 																		// ResideMenu.DIRECTION_RIGHT
 		}
 
+		resideMenu.setBackground(R.drawable.lors);
 		resideMenu.setSwipeDirectionDisable(ResideMenu.DIRECTION_LEFT);
 		resideMenu.setSwipeDirectionDisable(ResideMenu.DIRECTION_RIGHT);
 
@@ -954,7 +955,7 @@ public class MainActivity extends Activity implements OnClickListener {
 				eb.setType("t");
 				eb.setText(text[i]);
 				eb.setAnswer(ans[i]);
-				eb.setSolved(0);
+
 
 				mQuestioneasy.add(eb);
 			}
@@ -1047,7 +1048,7 @@ public class MainActivity extends Activity implements OnClickListener {
 				doorbellDialog.show();
 				break;
 			case 302:
-				String txtLuv = "Game of Thrones fan ? 'You know Nothing' is a quiz challenge to prove your GoT Quotient !! \nDownload http://ykn.mobilefirst.in";
+				String txtLuv = "Cricket fan ? 'criCket quiZ ' is a quiz challenge to prove your criCket Quotient !! \nDownload http://cricketquiz.mobiweb.co.in";
 				Intent intentx = new Intent(Intent.ACTION_SEND);
 				intentx.setType("text/plain");
 				intentx.putExtra(Intent.EXTRA_TEXT, txtLuv);
@@ -1176,7 +1177,7 @@ public class MainActivity extends Activity implements OnClickListener {
 			whatsapp.setPackage("com.whatsapp");
 			whatsapp.setType("text/plain");
 			whatsapp.putExtra(Intent.EXTRA_TEXT,
-					"Can You Help Me With This\n-via ykn.mobilefirst.in ");
+					"Can You Help Me With This\n-via cricketquiz.mobiweb.co.in ");
 			whatsapp.setType("image/*");
 			whatsapp.putExtra(Intent.EXTRA_STREAM, fileuri);
 

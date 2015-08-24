@@ -42,7 +42,7 @@
             android:layout_centerHorizontal="true"
             android:alpha=".4"
             android:scaleType="centerCrop"
-            android:src="@drawable/ironethrone" />
+            android:src="@drawable/cup" />
 
         <TextView
             android:id="@+id/textView1"

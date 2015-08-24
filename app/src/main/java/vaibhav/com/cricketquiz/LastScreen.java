@@ -1,26 +1,23 @@
 package vaibhav.com.cricketquiz;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.OutputStream;
-
-import com.facebook.appevents.AppEventsLogger;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Bitmap.Config;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Typeface;
-import android.graphics.Bitmap.Config;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.OutputStream;
 
 public class LastScreen extends Activity {
 
@@ -37,7 +34,7 @@ public class LastScreen extends Activity {
 		TextView ans1 = (TextView) findViewById(R.id.textView1);
 
 		ans1.setTypeface(got);
-		ans1.setText("NOW  THE  IRON  THRONE  IS  YOURS");
+		ans1.setText("Its all yours");
 
 		ImageView share = (ImageView) findViewById(R.id.share);
 
@@ -57,7 +54,7 @@ public class LastScreen extends Activity {
 
 				Uri fileuri = Uri.fromFile(imageFile);
 
-				String txtLuv = "-via ykn.mobilefirst.in";
+				String txtLuv = "-via cricketquiz.mobiweb.co.in";
 //				Intent intentx = new Intent(Intent.ACTION_SEND);
 //				intentx.setType("text/plain");
 //				intentx.putExtra(Intent.EXTRA_TEXT, txtLuv);

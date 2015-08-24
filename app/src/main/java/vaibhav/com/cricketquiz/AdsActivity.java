@@ -6,7 +6,6 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
-
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,120 +14,94 @@ import com.google.android.gms.ads.AdView;
 
 public class AdsActivity extends Activity {
 
-	Intent intent;
-	ImageView share, proceed;
-	TextView text;
-	Typeface typeface;
+    Intent intent;
+    ImageView share, proceed;
+    TextView text;
+    Typeface typeface;
 
-	String[] Details = {
-			"Peter Dinklage who plays Tyrion Lannister won Golden Globe award for best Supporting Role in mini series.",
+    String[] Details = {
+            "Shahid Afridi was flown in to play for the Pakistan team from West Indies to Nairobi in 1996 and didn't have a proper bat. That's when Waqar Younis gave 'Young Afridi' Sachin Tendulkar’s bat. Afridi hit 11 sixes and six boundaries with the bat and scored a 37-ball century against Sri Lanka which was the then fastest ODI century. The record, broken later by Corey Anderson (36 balls), now belongs to South Africa's AB de Villiers (31 balls).",
 
-			"Game of Thrones won Best TV BAFTA awards 2013.",
+            "In the 137 years of Test cricket no cricketer has ever hit a six off the first ball of a Test match. Audacious Chris Gayle achieved this feat against Bangladesh in 2012 off debutant Sohag Gazi.",
 
-			"The actresses who play Sansa and Arya are good friends in real life.",
+            "When Abbas Ali Baig reached a half-century in the third Test match against Australia at the Brabourne Stadium in 1960, a pretty young girl ran all the way from the North Stand to greet the batsman. She kissed Baig on his cheek..",
 
-			"Nikolaj Coster-Waldau, Jamie Lannister, got his start in the movie Black Hawk Down.",
+            "The only cricketer to play Test cricket for India and England is Saif Ali Khan’s grandfather, Iftikhar Ali Khan Pataudi",
 
-			"The actress who plays Catelyn Stark, Michelle Fairley, played Mrs. Granger in Harry Potter and the Deathly Hallows.",
+            "Alec Stewart was born on 8-4-63 and he scored 8463 Test runs",
 
-			"Jack Gleeson, aka Joffrey, played a little kid in Batman Begins.",
+            "India is the only country to win the 60-Over, 50-Over and 20-Over World Cup.",
 
-			"Emilia Clarke, who plays Daenerys on the show, does not dye her hair blonde. She wears a wig instead.",
+            "The 2000 Lord's Test between England and West Indies saw all the four innings being played on the same day. This feat was repeated 11 years later in the famous Cape Town Test where South Africa bowled out Australia for 47.",
 
-			"There is a Game of Thrones porn parody called \"Game of Bones.\"",
+            "This coincidence occurred during the first Test between South Africa and Australia at Cape Town. At 11:11, on 11/11/11, South Africa were 125 for 1 needing a further 111 runs for a win",
 
-			"Rolling Stone ranked Daenerys Targaryen at No. 1 on a list of 'Top 40 Game of Thrones Characters'.",
+            "The highest number of runs scored in an over is not 36. It’s 77  which was scored in RH Vance’s over in a match between Canterbury and Wellington.  This is how the over went - 0 4 4 4 6 6 4 6 1 4 1 0 6 6 6 6 6 0 0 4 0 1 ",
 
-			"The Dothraki language was created just for the show and contains more than 3,000 words.",
+            "In 1989, along with Sachin Tendulkar, 23 other cricketers made their International debuts. The last one to retire before Sachin, was New Zealand’s Chris Cairns, who retired in 2004",
 
-			"Sophie Turner, who plays Sansa Stark, adopted the dog that played her dire wolf in the show. The dog is named Zunni",
+            "MS Dhoni  have never scored an ODI ton outside of Asia",
 
-			"Peter Dinklage is vegetarian. All the \"meat\", he eats on the show isn't real.",
+            "Chinnaswamy Stadium at Bangalore is World's First Solar powered Cricket Stadium.\n" +
+                    "A 400kW Grid Interactive Solar Power Plant has been installed on the roof of the stadium",
 
-			"During the opening credits, each cast member's name is accompanied by the insignia of his/her character's house.",
+            "In the entire history of recorded Cricket, only four players have played on all ten batting positions for a team; names include Lance Klusener, Abdur Razzaq, Shoaib Malik and Hashan Tillakaratne.",
 
-			"In each of the first four seasons, one king dies: first season - Robert; second season - Renly; third season - Robb; fourth season - Joffrey.",
+            "Hanif Muhammad by the end of his career had done almost everything imaginable in the game of Cricket. He scored 55 first-class centuries with an impressive career average of 52.32; moreover the ambidextrous Hanif could also bowl with either arms along with keeping wickets on a number of occasions for his country.",
 
-			"It's the most pirated show in the world According to the filesharing website TorrentFreak, more people are illegally downloading Game of Thrones than any other show in the world",
+            "In all of 400 years history of Cricket, the fastest (electronically measured) speed for a cricket ball bowled by any bowler, ever, is precisely 161.3 km/h (100.23 mph) by Shoaib Akhtar of Pakistan to Nick Knite of England, on the 22nd February 2003 in the World Cup hosted by South Africa",
+            " Shoaib Akhtar handed Sachin Tendulkar a Golden Duck the first time these two came head to head, it was a late reverse swinging delivery that knocked Tendulkar’s middle wicket off the ground. He had also bowled Dravid, with a similar reverse swing, one ball before Sachin. These two deliveries are called, ‘Double jeopardy’ when Shoaib Akhtar made his first International impact ",
 
-			"The first season used Northern Inuit dogs, a type specifically bred for wolf-like appearance, to stand in for the direwolves ",
+            "The England Cricket Team is the only team in ODI history to lose a 60 over ODI Final (1979 World Cup), a 50 over ODI Final (1992 World Cup and 2004 Champions Trophy) and a 20 over ODI Final (2013 Champions Trophy) in ICC tournaments",
 
-			"Peter Vaughan, who plays Maester Aemon Targaryen, is partially blind in real life.",
 
-			"Jack Gleeson (Joffrey) received a letter from author George R.R. Martin after the show aired, stating 'Congratulations, everyone hates you!'.",
 
-			"The actor who plays The Mountain recently beat a thousand year old Icelandic weight lifting record dating back to the time of the Vikings.",
+    };
+    int x;
 
-			"Gandalf's sword from Lord of the Rings is in the iron throne",
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.trivia);
 
-			"In the year 2012, over 160 baby girls in the U.S. were legally named 'Khaleesi', after the character in the show, although it is not the character's name (Daenerys) but a title.",
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
-			"Game of Thrones is one of most expensive shows on TV. Some GoT episodes cost even more than $6 million to make.",
+        intent = getIntent();
+        x = intent.getIntExtra("level", 3);
+        proceed = (ImageView) findViewById(R.id.proceed);
+        share = (ImageView) findViewById(R.id.share);
+        text = (TextView) findViewById(R.id.text);
 
-			"Season 2's action-packed 'Blackwater' skated in with a reported price tag ofÂ $8 million.",
+        proceed.setOnClickListener(new OnClickListener() {
 
-			"In 2012, public BitTorrent trackers showed that one episode was illegally downloaded about 4,280,000 times.",
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                setResult(RESULT_OK, intent);
+                finish();
 
-			"According to the file sharing websiteTorrentFreak, more people are illegally downloading Game of Thrones than any other show in the world.",
+            }
+        });
+        x = x / 3;
+        typeface = CustomFont.getTypeface(AdsActivity.this, CustomFont.RALE);
+        text.setTypeface(typeface);
+        text.setText(Details[x]);
 
-			"Northern Ireland says 'Game of Thrones' has brought more than $100 million to their economy.",
+        share.setOnClickListener(new OnClickListener() {
 
-			"Oona O'Neill Chaplin who played Robb Stark's wife is Charlie Chaplin's granddaughter.",
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
 
-			"You know? Hodor is DJ too :)",
+                String txtLuv = Details[x].toString() + "\n-via cricketquiz.mobiweb.co.in";
+                Intent intentx = new Intent(Intent.ACTION_SEND);
+                intentx.setType("text/plain");
+                intentx.putExtra(Intent.EXTRA_TEXT, txtLuv);
+                startActivity(Intent.createChooser(intentx, "Share via"));
+            }
+        });
 
-			"More than two feet of human hair is used to make each of the show's Emmy-nominated wigs.	",
-
-			"Daenerys' dragons are named Drogon, Rhaegal, and Viserion",
-
-			"As of 2014, it is the most watched HBO TV-Series of all time, with an average viewership of 16.1 million (Season 4)"
-
-	};
-	int x;
-
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.trivia);
-
-		AdView mAdView = (AdView) findViewById(R.id.adView);
-		AdRequest adRequest = new AdRequest.Builder().build();
-		mAdView.loadAd(adRequest);
-
-		intent = getIntent();
-		x = intent.getIntExtra("level", 3);
-		proceed = (ImageView) findViewById(R.id.proceed);
-		share = (ImageView) findViewById(R.id.share);
-		text = (TextView) findViewById(R.id.text);
-
-		proceed.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				setResult(RESULT_OK, intent);
-				finish();
-
-			}
-		});
-		x = x / 3;
-		typeface = CustomFont.getTypeface(AdsActivity.this, CustomFont.RALE);
-		text.setTypeface(typeface);
-		text.setText(Details[x]);
-
-		share.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-
-				String txtLuv = Details[x].toString()+"\n-via ykn.mobilefirst.in";
-				Intent intentx = new Intent(Intent.ACTION_SEND);
-				intentx.setType("text/plain");
-				intentx.putExtra(Intent.EXTRA_TEXT, txtLuv);
-				startActivity(Intent.createChooser(intentx, "Share via"));
-			}
-		});
-
-	}
+    }
 }
