@@ -31,15 +31,15 @@
             android:src="@drawable/ic_share" />
     </RelativeLayout>
 
-    <com.google.android.gms.ads.AdView
+
+    <com.startapp.android.publish.banner.Banner
         android:id="@+id/adView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        ads:adSize="BANNER"
-        ads:adUnitId="a1517674a41797c" >
-    </com.google.android.gms.ads.AdView>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"/>
+
+
 
     <TextView
         android:id="@+id/text"

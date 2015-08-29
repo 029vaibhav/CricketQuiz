@@ -9,9 +9,6 @@ import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-
 public class AdsActivity extends Activity {
 
     Intent intent;
@@ -64,9 +61,6 @@ public class AdsActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.trivia);
 
-        AdView mAdView = (AdView) findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
 
         intent = getIntent();
         x = intent.getIntExtra("level", 3);
